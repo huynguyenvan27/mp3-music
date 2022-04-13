@@ -1,0 +1,78 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* background-color: #f0f8ff !important; */
+  background-image: linear-gradient( -150deg, rgb(223,29,53) 0%, rgb(30,50,100) 100%) !important;
+  color: white !important
+}
+
+ul{
+  /* padding-left: 0; */
+  list-style: none;
+
+}
+
+
+.App{
+  height: 100vh;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content:  center;
+  height: 100vh;
+  align-items: center;
+}
+li{
+  cursor: pointer;
+  text-align: start;
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+
+.heading{
+  font-weight: 800;
+}
+.list-track{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 300px;
+  margin-left: -300px;
+  padding-right: 20px;
+  transition: all 0.5s;
+  box-shadow: 8px -10px 18px -12px rgb(51 51 51 / 100%);
+}
+
+img{
+  width: 300px;
+  border-radius: 100%;
+  height: 300px;
+  /* overflow: hidden; */
+}
+.title-song{
+  font-weight: 600;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#progress{
+  width: 500px;
+}
+
+.btn i{
+  font-size: 30px;
+  color: white;
+}
+
+.list-track.open {
+  margin-left: 0
+}
+.close-side{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
