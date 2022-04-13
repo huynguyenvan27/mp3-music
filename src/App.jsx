@@ -92,7 +92,7 @@ const Player = () => {
     timingRef.current = setInterval(() => {
       if (audioRef.current.ended) {
         if(isRandom){
-          handleSetIsRandom();
+          random()
         }
         else{
           handleNextSong()
@@ -135,16 +135,12 @@ const Player = () => {
   }
   const handleSetIsRandom = useCallback(() =>{
     setIsSong(false)
-    if(isRandom){
-      const newIndex = Math.floor(Math.random() * (Data.length+1))
-      setCurrentIndex(newIndex)
-      // if(!isPlaying){
-      //   audioRef.current.play();
-      //   setIsPlaying(true);
-      // }
-    }
     setIsRandom(!isRandom)
   },[isRandom])
+  const random = useCallback(() =>{
+      const newIndex = Math.floor(Math.random() * (Data.length+1))
+      setCurrentIndex(newIndex)
+  },[currentIndex])
   return(
     <div>
       
