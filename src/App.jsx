@@ -59,7 +59,6 @@ const Player = () => {
       document.title = song.title
     }
   })
-
   useEffect(() => {
     if (isPlaying) {
       audioRef.current.play();
@@ -135,12 +134,14 @@ const Player = () => {
   }
   const handleSetIsRandom = useCallback(() =>{
     setIsSong(false)
+    audioRef.current.loop = false;
     setIsRandom(!isRandom)
   },[isRandom])
   const random = useCallback(() =>{
       const newIndex = Math.floor(Math.random() * (Data.length+1))
       setCurrentIndex(newIndex)
-  },[currentIndex])
+      console.log(newIndex)
+  },[])
   return(
     <div>
       
