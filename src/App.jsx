@@ -138,6 +138,7 @@ const Player = () => {
     setIsRandom(!isRandom)
   },[isRandom])
   const random = useCallback(() =>{
+      console.log('random');
       const newIndex = Math.floor(Math.random() * (Data.length+1))
       setCurrentIndex(newIndex)
       console.log(newIndex)
